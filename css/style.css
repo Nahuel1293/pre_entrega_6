@@ -1,0 +1,68 @@
+/*Paleta de colores*/
+:root {
+    --color-primario: #E63946;
+    --color-secundario: #111111;
+    --color-acento: #FFFFFF;
+    --color-nav:#8E27F5;
+    --color-nav_a: #000000;
+}
+
+/*Configuración del fondo*/
+body {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+        url('../img/Fondo.jpg');
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+/*Fuente principal y de respaldo del body*/
+    min-height: 100vh;
+    margin: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+/*edicion de los h*/
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--color-secundario);
+}
+
+/*edición de los p*/
+p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-acento);
+}
+
+/*edicion del nav*/
+
+.navegacion {
+    background-color: var(--color-nav);
+    padding: 10px;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion a {
+    color: var( --color-nav_a);
+    text-decoration: none;
+}
+
