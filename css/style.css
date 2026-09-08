@@ -1,4 +1,6 @@
-/* RESETEO */
+/* =========================================================
+   RESETEO
+   ========================================================= */
 
 * {
     margin: 0;
@@ -7,7 +9,9 @@
 }
 
 
-/* PALETA DE COLORES */
+/* =========================================================
+   PALETA DE COLORES
+   ========================================================= */
 
 :root {
     --color-primario: #E63946;
@@ -18,7 +22,9 @@
 }
 
 
-/* BODY */
+/* =========================================================
+   BODY
+   ========================================================= */
 
 body {
     background-image:
@@ -34,49 +40,64 @@ body {
     background-repeat: no-repeat;
 
     min-height: 100vh;
-    margin: 10px;
+
+    margin: 0;
+    padding: 10px;
 
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
 }
 
 
-/* HEADER */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 
-    padding: 10px;
+    gap: 20px;
+    padding: 20px;
+
     border-bottom: 1px solid #0c010180;
 }
 
 
-/* LOGO */
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo {
     width: 150px;
+    flex: 0 0 auto;
 }
 
 .logo img {
-    max-width: 100%;
+    display: block;
+    width: 100%;
     height: auto;
 }
 
 
-/* NAVBAR */
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
 .navegacion {
+    width: 100%;
     background-color: var(--color-nav);
-    padding: 10px;
+    padding: 20px;
 }
 
 .navegacion ul {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
+
+    gap: 15px;
+
     list-style: none;
 }
 
@@ -86,68 +107,181 @@ header {
 }
 
 
-/* TITULOS */
+/* =========================================================
+   TITULOS
+   ========================================================= */
 
 h1 {
-    font-size: 48px;
+    font-size: clamp(2rem, 8vw, 3rem);
     font-weight: 700;
     color: var(--color-primario);
 
     border-bottom: 2px solid red;
+
     display: inline-block;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: clamp(1.6rem, 6vw, 2.25rem);
     font-weight: 600;
     color: var(--color-secundario);
 }
 
 
-/* PARRAFOS */
+/* =========================================================
+   PARRAFOS
+   ========================================================= */
 
 p {
-    font-size: 18px;
+    font-size: clamp(1rem, 4vw, 1.125rem);
     font-weight: 400;
     color: var(--color-acento);
+
+    line-height: 1.6;
 }
 
 
-/* SECCIONES */
+/* =========================================================
+   MAIN
+   ========================================================= */
 
-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* <--- Permite que las cards se acomoden si no entran */
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   GRID PRINCIPAL DEL INDEX
+   MOBILE FIRST
+   ========================================================= */
+
+.pagina-inicio {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "titulo"
+        "hero"
+        "contenido";
+
     gap: 20px;
-    padding: 20px;
-    margin-bottom: 40px;
-}
 
-/* ARTICULOS */
-
-section article {
-    flex: 1;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 
-/* CARDS */
+/* Áreas del Grid */
+
+.pagina-inicio > h1 {
+    grid-area: titulo;
+}
+
+.pagina-inicio > .hero {
+    grid-area: hero;
+}
+
+.pagina-inicio > .inicio-grid {
+    grid-area: contenido;
+}
+
+
+/* =========================================================
+   HERO / ASIDE
+   ========================================================= */
+
+.hero {
+    padding: 20px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: center;
+}
+
+.hero p {
+    color: var(--color-secundario);
+    font-weight: 600;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+
+/* =========================================================
+   GRID DE CARDS DEL INDEX
+   MOBILE FIRST
+   ========================================================= */
+
+.inicio-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "equipamiento"
+        "clases"
+        "horarios"
+        "precios";
+
+    gap: 20px;
+
+    padding: 20px 0;
+}
+
+
+/* Áreas de cada card */
+
+.inicio-grid .card:nth-child(1) {
+    grid-area: equipamiento;
+}
+
+.inicio-grid .card:nth-child(2) {
+    grid-area: clases;
+}
+
+.inicio-grid .card:nth-child(3) {
+    grid-area: horarios;
+}
+
+.inicio-grid .card:nth-child(4) {
+    grid-area: precios;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
 
 .card {
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: 100%;
 }
 
 
-/* IMAGENES */
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
 
 img {
     max-width: 100%;
+    height: auto;
 }
-
-
-/* IMAGENES DE LAS CARDS */
 
 .card img {
     width: 100%;
@@ -155,44 +289,126 @@ img {
     object-fit: contain;
 }
 
-/* HERO / ASIDE */
 
-.hero {
-    padding: 20px;
-    margin: 20px;
-}
+/* Imagen especial de equipamiento */
 
-.hero img {
-    width: 900px;
-    max-width: 100%;
+.card .imagen-hero {
+    width: 100%;
+    max-width: 600px;
     height: auto;
 }
 
 
-/* FIGCAPTION */
+/* =========================================================
+   FIGCAPTION
+   ========================================================= */
 
 figcaption {
     color: var(--color-secundario);
     font-weight: bold;
     text-decoration: underline;
+
+    margin-top: 10px;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   PÁGINAS INTERNAS
+   ========================================================= */
+
+main > h1 {
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   CLASES
+   MOBILE FIRST
+   ========================================================= */
+
+.clases-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "imagen"
+        "informacion";
+
+    gap: 20px;
+
+    padding: 20px 0;
+}
+
+.clases-grid .clases-imagen {
+    grid-area: imagen;
+}
+
+.clases-grid .clases-info {
+    grid-area: informacion;
+}
+
+
+/* Imagen de clases */
+
+.clases-imagen {
+    width: 100%;
+}
+
+.clases-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Información de clases */
+
+.clases-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   STAFF
+   ========================================================= */
+
+.staff {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 20px 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 
-    gap: 40px;
-    padding: 40px;
+    gap: 20px;
+
+    padding: 40px 20px;
 }
 
 footer ul {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+
+    gap: 30px;
 
     list-style: none;
 }
@@ -201,10 +417,107 @@ footer img {
     width: 60px;
     height: auto;
 }
-/* IMAGEN EQUIPAMIENTO */
 
-.card .imagen-hero {
-    width: 600px;
-    max-width: 100%;
-    height: auto;
+
+/* =========================================================
+   MEDIA QUERY DESKTOP
+   BREAKPOINT: 1024px
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 30px;
+    }
+
+    .navegacion {
+        width: auto;
+    }
+
+    .navegacion ul {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       GRID PRINCIPAL DEL INDEX
+       ----------------------------------------------------- */
+
+    .pagina-inicio {
+        grid-template-columns: 1fr 2fr;
+
+        grid-template-areas:
+            "titulo titulo"
+            "hero contenido";
+
+        gap: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       GRID DE CARDS DEL INDEX
+       ----------------------------------------------------- */
+
+    .inicio-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "equipamiento clases"
+            "horarios precios";
+
+        gap: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       CLASES
+       ----------------------------------------------------- */
+
+    .clases-grid {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "imagen informacion";
+
+        gap: 40px;
+
+        align-items: center;
+    }
+
+
+    /* -----------------------------------------------------
+       STAFF
+       ----------------------------------------------------- */
+
+    .staff {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+        align-items: center;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 40px;
+    }
 }
