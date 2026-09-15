@@ -1,51 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimnasio power | Instalaciones</title>
-    <!--link a css-->
-    <link rel="stylesheet" href="../css/style.css">
-    <!--link a fuentes-->
+
+    <title>Gimnasio Power | Instalaciones</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
+
 <body>
-  <header>
-    <!--Logo-->
-         <div class="logo">
-        <a href="../index.html"><img src="../img/energy-gym-logo-vector-illustration-260nw-2485225903.webp" alt="logo"></a>
-    </div>
-    <!--Nav y referencias-->
-        <nav class="navegacion">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./staff.html">Personal</a></li>
-                <li><a href="./clases.html">Clases</a></li>
-                <li><a href="./horarios.html">Horarios particulares</a></li>
-                <li><a href="#">Instalaciones</a></li>
-            </ul>
+
+
+    <!-- NAVBAR -->
+
+    <header class="header-bootstrap">
+
+        <nav class="navbar navbar-expand-lg navbar-gym">
+
+            <div class="container-fluid">
+
+                <a
+                    class="navbar-brand logo-navbar"
+                    href="../index.html">
+
+                    <img
+                        src="../img/energy-gym-logo-vector-illustration-260nw-2485225903.webp"
+                        alt="Logo Gimnasio Power">
+
+                </a>
+
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="../index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="./staff.html">
+                                Personal
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="./clases.html">
+                                Clases
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="./horarios.html">
+                                Horarios
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="./instalaciones.html">
+                                Instalaciones
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </nav>
+
     </header>
 
+
     <main>
+
         <h1>Nuestras instalaciones</h1>
-        <section>
-            <article>
-                <img src="../img/instalaciones.jpg" alt="instalaciones">
+
+
+        <section class="simple-page-section">
+
+            <article class="card bootstrap-card">
+
+                <img
+                    class="card-img-top"
+                    src="../img/instalaciones.jpg"
+                    alt="Instalaciones del gimnasio">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">
+                        Un espacio preparado para entrenar
+                    </h2>
+
+                    <p class="card-text">
+                        Contamos con diferentes espacios y
+                        equipamiento para acompañarte durante
+                        tus entrenamientos.
+                    </p>
+
+                    <a
+                        href="./clases.html"
+                        class="btn btn-gym">
+
+                        Conocer nuestras clases
+
+                    </a>
+
+                </div>
+
             </article>
+
         </section>
 
     </main>
 
+
     <footer>
+
         <p>Todos los derechos reservados</p>
+
         <ul>
-            <li><a href="https://www.instagram.com/" target="_blank"><img src="../img/IG.jpg" alt="ig"></a></li>
-            <li><a href="https://www.tiktok.com/"><img src="../img/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.webp" alt="tiktok"></a></li>
-            <li><a href="https://x.com/"><img src="../img/X_icon.svg.webp" alt="x"></a></li>
+
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+
+                    <img
+                        src="../img/IG.jpg"
+                        alt="Instagram">
+
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.tiktok.com/" target="_blank">
+
+                    <img
+                        src="../img/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.webp"
+                        alt="TikTok">
+
+                </a>
+            </li>
+
+            <li>
+                <a href="https://x.com/" target="_blank">
+
+                    <img
+                        src="../img/X_icon.svg.webp"
+                        alt="X">
+
+                </a>
+            </li>
+
         </ul>
+
     </footer>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
+
 </html>

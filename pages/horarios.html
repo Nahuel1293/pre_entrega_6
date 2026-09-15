@@ -1,51 +1,528 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gimnasio Power | Horarios</title>
-    <!--link a css-->
-    <link rel="stylesheet" href="../css/style.css">
-    <!--link a fuentes-->
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Fuente Oswald -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
+
 <body>
-  <header>
-      <!--Logo-->
-         <div class="logo">
-        <a href="../index.html"><img src="../img/energy-gym-logo-vector-illustration-260nw-2485225903.webp" alt="logo"></a>
-    </div>
-     <!--Nav y referencias-->
-        <nav class="navegacion">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./staff.html">Personal</a></li>
-                <li><a href="./clases.html">Clases</a></li>
-                <li><a href="#">Horarios particulares</a></li>
-                <li><a href="./instalaciones.html">Instalaciones</a></li>
-            </ul>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="header-bootstrap">
+
+        <nav class="navbar navbar-expand-lg navbar-gym">
+
+            <div class="container-fluid">
+
+                <a
+                    class="navbar-brand logo-navbar"
+                    href="../index.html">
+
+                    <img
+                        src="../img/energy-gym-logo-vector-illustration-260nw-2485225903.webp"
+                        alt="Logo Gimnasio Power">
+
+                </a>
+
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="../index.html">
+
+                                Inicio
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="./staff.html">
+
+                                Personal
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="./clases.html">
+
+                                Clases
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="./horarios.html">
+
+                                Horarios
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="./instalaciones.html">
+
+                                Instalaciones
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </nav>
+
     </header>
 
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================== -->
+
     <main>
-        <h1>Todos los horarios</h1>
-        <section>
-            <article>
-                <img src="../img/86eb93242ed186e065612b009f54b2ca.jpg" alt="horas_particulares">
-            </article>
+
+        <h1>Horarios</h1>
+
+
+        <section class="horarios-section">
+
+
+            <div class="horarios-intro">
+
+                <h2>
+                    Horarios de nuestras clases
+                </h2>
+
+                <p>
+                    Elegí la actividad que más te guste y
+                    consultá los días y horarios disponibles.
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 TABLA DE HORARIOS
+            ========================== -->
+
+            <div class="table-responsive horarios-table-container">
+
+                <table class="table horarios-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">
+                                Actividad
+                            </th>
+
+                            <th scope="col">
+                                Lunes
+                            </th>
+
+                            <th scope="col">
+                                Martes
+                            </th>
+
+                            <th scope="col">
+                                Miércoles
+                            </th>
+
+                            <th scope="col">
+                                Jueves
+                            </th>
+
+                            <th scope="col">
+                                Viernes
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <th scope="row">
+                                Musculación
+                            </th>
+
+                            <td>
+                                08:00 - 22:00
+                            </td>
+
+                            <td>
+                                08:00 - 22:00
+                            </td>
+
+                            <td>
+                                08:00 - 22:00
+                            </td>
+
+                            <td>
+                                08:00 - 22:00
+                            </td>
+
+                            <td>
+                                08:00 - 22:00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th scope="row">
+                                Yoga
+                            </th>
+
+                            <td>
+                                10:00 - 11:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                10:00 - 11:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                10:00 - 11:00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th scope="row">
+                                Spinning
+                            </th>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                18:00 - 19:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                18:00 - 19:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th scope="row">
+                                Boxeo
+                            </th>
+
+                            <td>
+                                19:00 - 20:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                19:00 - 20:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                19:00 - 20:00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th scope="row">
+                                Powerlifting
+                            </th>
+
+                            <td>
+                                17:00 - 19:00
+                            </td>
+
+                            <td>
+                                17:00 - 19:00
+                            </td>
+
+                            <td>
+                                17:00 - 19:00
+                            </td>
+
+                            <td>
+                                17:00 - 19:00
+                            </td>
+
+                            <td>
+                                17:00 - 19:00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <th scope="row">
+                                Hidrogimnasia
+                            </th>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                09:00 - 10:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                            <td>
+                                09:00 - 10:00
+                            </td>
+
+                            <td>
+                                —
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- =========================
+                 INFORMACIÓN
+            ========================== -->
+
+            <div class="horarios-info">
+
+
+                <article class="horario-info-card">
+
+                    <h2>
+                        Gimnasio
+                    </h2>
+
+                    <p>
+                        Nuestro gimnasio se encuentra disponible
+                        las 24 horas para que puedas entrenar
+                        cuando quieras.
+                    </p>
+
+                </article>
+
+
+                <article class="horario-info-card">
+
+                    <h2>
+                        Clases
+                    </h2>
+
+                    <p>
+                        Las clases cuentan con horarios
+                        específicos. Consultá nuestra sección
+                        de clases para conocer todas las
+                        disciplinas disponibles.
+                    </p>
+
+                    <a
+                        href="./clases.html"
+                        class="btn btn-gym">
+
+                        Ver clases
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
         </section>
 
     </main>
 
-  <footer>
-        <p>Todos los derechos reservados</p>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Todos los derechos reservados
+        </p>
+
+
         <ul>
-            <li><a href="https://www.instagram.com/" target="_blank"><img src="../img/IG.jpg" alt="ig"></a></li>
-            <li><a href="https://www.tiktok.com/"><img src="../img/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.webp" alt="tiktok"></a></li>
-            <li><a href="https://x.com/"><img src="../img/X_icon.svg.webp" alt="x"></a></li>
+
+            <li>
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank">
+
+                    <img
+                        src="../img/IG.jpg"
+                        alt="Instagram">
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a
+                    href="https://www.tiktok.com/"
+                    target="_blank">
+
+                    <img
+                        src="../img/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.webp"
+                        alt="TikTok">
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a
+                    href="https://x.com/"
+                    target="_blank">
+
+                    <img
+                        src="../img/X_icon.svg.webp"
+                        alt="X">
+
+                </a>
+
+            </li>
+
         </ul>
+
     </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
+
 </html>
