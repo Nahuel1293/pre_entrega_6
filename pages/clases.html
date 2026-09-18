@@ -4,22 +4,36 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Gimnasio Power | Clases</title>
+
+    <!-- Bootstrap -->
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
+    <!-- Fuente -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
 
 </head>
 
@@ -32,7 +46,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-gym">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <a
                     class="navbar-brand logo-navbar"
@@ -66,44 +80,54 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
+
                             <a
                                 class="nav-link"
                                 href="../index.html">
                                 Inicio
                             </a>
+
                         </li>
 
                         <li class="nav-item">
+
                             <a
                                 class="nav-link"
                                 href="./staff.html">
                                 Personal
                             </a>
+
                         </li>
 
                         <li class="nav-item">
+
                             <a
                                 class="nav-link active"
                                 aria-current="page"
                                 href="./clases.html">
                                 Clases
                             </a>
+
                         </li>
 
                         <li class="nav-item">
+
                             <a
                                 class="nav-link"
                                 href="./horarios.html">
                                 Horarios
                             </a>
+
                         </li>
 
                         <li class="nav-item">
+
                             <a
                                 class="nav-link"
                                 href="./instalaciones.html">
                                 Instalaciones
                             </a>
+
                         </li>
 
                     </ul>
@@ -117,16 +141,31 @@
     </header>
 
 
+    <!-- CONTENIDO -->
+
     <main>
 
-        <h1>Todas las clases</h1>
+        <section class="page-heading">
+
+            <p class="section-subtitle">
+                ENTRENÁ A TU MANERA
+            </p>
+
+            <h1>
+                Todas las clases
+            </h1>
+
+            <p>
+                Elegí la disciplina que mejor se adapte
+                a tus objetivos.
+            </p>
+
+        </section>
 
 
         <!-- CAROUSEL -->
 
-        <section class="carousel-section">
-
-            <h2>Disciplinas disponibles</h2>
+        <section class="section-block">
 
             <div
                 id="carouselClases"
@@ -155,7 +194,7 @@
                         type="button"
                         data-bs-target="#carouselClases"
                         data-bs-slide-to="2"
-                        aria-label="Equipamiento">
+                        aria-label="Musculación">
                     </button>
 
                 </div>
@@ -172,11 +211,12 @@
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Boxeo</h3>
+                            <h2>
+                                Boxeo
+                            </h2>
 
                             <p>
-                                Entrenamiento de boxeo para
-                                diferentes niveles.
+                                Técnica, resistencia y preparación física.
                             </p>
 
                         </div>
@@ -189,15 +229,17 @@
                         <img
                             src="../img/images.jpg"
                             class="d-block w-100"
-                            alt="Clases">
+                            alt="Entrenamiento">
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Entrenamiento</h3>
+                            <h2>
+                                Entrenamiento
+                            </h2>
 
                             <p>
-                                Diferentes disciplinas para
-                                alcanzar tus objetivos.
+                                Diferentes disciplinas para alcanzar
+                                tus objetivos.
                             </p>
 
                         </div>
@@ -214,7 +256,9 @@
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Musculación</h3>
+                            <h2>
+                                Musculación
+                            </h2>
 
                             <p>
                                 Equipamiento preparado para entrenar.
@@ -267,170 +311,196 @@
 
         <!-- CARDS -->
 
-        <section class="clases-cards">
+        <section class="section-block">
 
-            <article class="card bootstrap-card">
+            <div class="row g-4">
 
-                <div class="card-body">
+                <div class="col-12 col-md-6 col-lg-4">
 
-                    <h2 class="card-title">
-                        Boxeo
-                    </h2>
+                    <article class="card bootstrap-card h-100">
 
-                    <p class="card-text">
-                        Técnica, resistencia y preparación física.
-                    </p>
+                        <div class="card-body">
 
-                    <a
-                        href="./horarios.html"
-                        class="btn btn-gym">
+                            <h2 class="card-title">
+                                Boxeo
+                            </h2>
 
-                        Consultar horarios
+                            <p class="card-text">
+                                Técnica, resistencia y preparación física.
+                            </p>
 
-                    </a>
+                            <a
+                                href="./horarios.html"
+                                class="btn btn-gym">
+                                Consultar horarios
+                            </a>
 
-                </div>
+                        </div>
 
-            </article>
-
-
-            <article class="card bootstrap-card">
-
-                <div class="card-body">
-
-                    <h2 class="card-title">
-                        Yoga
-                    </h2>
-
-                    <p class="card-text">
-                        Flexibilidad, movilidad y bienestar.
-                    </p>
-
-                    <a
-                        href="./horarios.html"
-                        class="btn btn-gym">
-
-                        Consultar horarios
-
-                    </a>
+                    </article>
 
                 </div>
 
-            </article>
 
+                <div class="col-12 col-md-6 col-lg-4">
 
-            <article class="card bootstrap-card">
+                    <article class="card bootstrap-card h-100">
 
-                <div class="card-body">
+                        <div class="card-body">
 
-                    <h2 class="card-title">
-                        Spinning
-                    </h2>
+                            <h2 class="card-title">
+                                Yoga
+                            </h2>
 
-                    <p class="card-text">
-                        Entrenamiento cardiovascular.
-                    </p>
+                            <p class="card-text">
+                                Flexibilidad, movilidad y bienestar.
+                            </p>
 
-                    <a
-                        href="./horarios.html"
-                        class="btn btn-gym">
+                            <a
+                                href="./horarios.html"
+                                class="btn btn-gym">
+                                Consultar horarios
+                            </a>
 
-                        Consultar horarios
+                        </div>
 
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="card bootstrap-card">
-
-                <div class="card-body">
-
-                    <h2 class="card-title">
-                        Musculación
-                    </h2>
-
-                    <p class="card-text">
-                        Trabajo de fuerza con equipamiento.
-                    </p>
-
-                    <a
-                        href="./horarios.html"
-                        class="btn btn-gym">
-
-                        Consultar horarios
-
-                    </a>
+                    </article>
 
                 </div>
 
-            </article>
 
+                <div class="col-12 col-md-6 col-lg-4">
 
-            <article class="card bootstrap-card">
+                    <article class="card bootstrap-card h-100">
 
-                <div class="card-body">
+                        <div class="card-body">
 
-                    <h2 class="card-title">
-                        Powerlifting
-                    </h2>
+                            <h2 class="card-title">
+                                Spinning
+                            </h2>
 
-                    <p class="card-text">
-                        Entrenamiento enfocado en fuerza.
-                    </p>
+                            <p class="card-text">
+                                Entrenamiento cardiovascular
+                                y resistencia.
+                            </p>
 
-                    <a
-                        href="./horarios.html"
-                        class="btn btn-gym">
+                            <a
+                                href="./horarios.html"
+                                class="btn btn-gym">
+                                Consultar horarios
+                            </a>
 
-                        Consultar horarios
+                        </div>
 
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="card bootstrap-card">
-
-                <div class="card-body">
-
-                    <h2 class="card-title">
-                        Hidrogimnasia
-                    </h2>
-
-                    <p class="card-text">
-                        Actividad física realizada dentro del agua.
-                    </p>
-
-                    <a
-                        href="./horarios.html"
-                        class="btn btn-gym">
-
-                        Consultar horarios
-
-                    </a>
+                    </article>
 
                 </div>
 
-            </article>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <div class="card-body">
+
+                            <h2 class="card-title">
+                                Musculación
+                            </h2>
+
+                            <p class="card-text">
+                                Trabajo de fuerza con equipamiento.
+                            </p>
+
+                            <a
+                                href="./horarios.html"
+                                class="btn btn-gym">
+                                Consultar horarios
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <div class="card-body">
+
+                            <h2 class="card-title">
+                                Powerlifting
+                            </h2>
+
+                            <p class="card-text">
+                                Entrenamiento enfocado en fuerza
+                                y rendimiento.
+                            </p>
+
+                            <a
+                                href="./horarios.html"
+                                class="btn btn-gym">
+                                Consultar horarios
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <div class="card-body">
+
+                            <h2 class="card-title">
+                                Hidrogimnasia
+                            </h2>
+
+                            <p class="card-text">
+                                Actividad física realizada dentro
+                                del agua.
+                            </p>
+
+                            <a
+                                href="./horarios.html"
+                                class="btn btn-gym">
+                                Consultar horarios
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
 
         </section>
 
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
 
-        <p>Todos los derechos reservados</p>
+        <p>
+            Todos los derechos reservados | Gimnasio Power
+        </p>
 
         <ul>
 
             <li>
-                <a href="https://www.instagram.com/" target="_blank">
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <img
                         src="../img/IG.jpg"
@@ -440,7 +510,10 @@
             </li>
 
             <li>
-                <a href="https://www.tiktok.com/" target="_blank">
+                <a
+                    href="https://www.tiktok.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <img
                         src="../img/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.webp"
@@ -450,7 +523,10 @@
             </li>
 
             <li>
-                <a href="https://x.com/" target="_blank">
+                <a
+                    href="https://x.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <img
                         src="../img/X_icon.svg.webp"
@@ -464,6 +540,8 @@
     </footer>
 
 
+    <!-- Bootstrap JavaScript -->
+
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
@@ -471,3 +549,4 @@
 </body>
 
 </html>
+

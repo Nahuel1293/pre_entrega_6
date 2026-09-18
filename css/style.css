@@ -14,11 +14,13 @@
 ========================================================= */
 
 :root {
+
     --color-primario: #E63946;
     --color-secundario: #75f010;
     --color-acento: #FFFFFF;
     --color-nav: #8E27F5;
-    --color-nav-a: #000000;
+    --color-negro: #000000;
+
 }
 
 
@@ -30,14 +32,12 @@ body {
 
     min-height: 100vh;
 
-    padding: 10px;
-
     font-family: 'Oswald', sans-serif;
 
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.40),
-            rgba(0, 0, 0, 0.40)
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
         ),
         url('../img/Fondo.jpg');
 
@@ -45,37 +45,35 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    color: var(--color-acento);
+
 }
 
 
 /* =========================================================
-   NAVBAR BOOTSTRAP
+   NAVBAR
 ========================================================= */
 
 .header-bootstrap {
+
     width: 100%;
-    margin-bottom: 20px;
+
+    padding: 10px 10px 0;
+
 }
 
 
-/* Barra */
-
 .navbar-gym {
-
-    width: 100%;
 
     background-color: var(--color-nav);
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     padding: 8px 15px;
 
 }
 
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .logo-navbar {
 
@@ -83,103 +81,35 @@ body {
 
     align-items: center;
 
-    width: 80px !important;
-
-    height: auto !important;
-
     padding: 0 !important;
-
-    margin: 0 !important;
 
 }
 
 
 .logo-navbar img {
 
+    width: 70px;
+
+    height: auto;
+
     display: block;
-
-    width: 80px !important;
-
-    max-width: 80px !important;
-
-    height: auto !important;
 
     object-fit: contain;
 
 }
 
 
-/* Hover logo */
-
 .logo-navbar:hover {
 
     transform: scale(1.05);
 
-    opacity: 0.9;
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
-
-}
-
-
-/* Focus logo */
-
-.logo-navbar:focus {
-
-    outline: 3px solid var(--color-secundario);
-
-    outline-offset: 3px;
+    transition: transform 0.2s ease;
 
 }
 
 
 /* =========================================================
-   HAMBURGUESA
-========================================================= */
-
-.navbar-gym .navbar-toggler {
-
-    border: 2px solid var(--color-secundario);
-
-    padding: 5px 8px;
-
-    transition:
-        transform 0.3s ease,
-        background-color 0.3s ease;
-
-}
-
-
-.navbar-gym .navbar-toggler:hover {
-
-    transform: scale(1.05);
-
-    background-color: rgba(117, 240, 16, 0.15);
-
-}
-
-
-.navbar-gym .navbar-toggler:focus {
-
-    box-shadow:
-        0 0 0 3px rgba(117, 240, 16, 0.4);
-
-}
-
-
-.navbar-gym .navbar-toggler-icon {
-
-    width: 25px;
-
-    height: 25px;
-
-}
-
-
-/* =========================================================
-   LINKS NAVBAR
+   NAVBAR LINKS
 ========================================================= */
 
 .navbar-gym .navbar-nav {
@@ -193,70 +123,57 @@ body {
 
 .navbar-gym .nav-link {
 
-    color: var(--color-nav-a);
+    color: var(--color-negro);
 
     font-weight: 600;
 
-    padding: 8px 12px !important;
+    padding: 9px 14px !important;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
     transition:
-        color 0.3s ease,
-        background-color 0.3s ease,
-        transform 0.3s ease;
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 
 }
 
 
-/* HOVER */
-
 .navbar-gym .nav-link:hover {
 
-    color: var(--color-acento);
-
     background-color: var(--color-primario);
+
+    color: var(--color-acento);
 
     transform: translateY(-2px);
 
 }
 
 
-/* FOCUS */
-
-.navbar-gym .nav-link:focus {
-
-    color: var(--color-acento);
-
-    background-color: var(--color-primario);
-
-    outline: 3px solid var(--color-secundario);
-
-    outline-offset: 2px;
-
-}
-
-
-/* ACTIVE */
-
-.navbar-gym .nav-link:active {
-
-    color: var(--color-acento);
-
-    background-color: #b91c2a;
-
-    transform: scale(0.96);
-
-}
-
-
-/* Página actual */
-
 .navbar-gym .nav-link.active {
 
+    background-color: var(--color-primario);
+
     color: var(--color-acento);
 
-    background-color: var(--color-primario);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.navbar-gym .navbar-toggler {
+
+    border: 2px solid var(--color-secundario);
+
+}
+
+
+.navbar-gym .navbar-toggler:focus {
+
+    box-shadow:
+        0 0 0 3px rgba(117, 240, 16, 0.35);
 
 }
 
@@ -267,36 +184,28 @@ body {
 
 main {
 
-    width: 100%;
-
-    max-width: 1400px;
+    width: min(1400px, 100%);
 
     margin: 0 auto;
+
+    padding: 30px 15px 50px;
 
 }
 
 
 /* =========================================================
-   TITULOS
+   TITLES
 ========================================================= */
 
 h1 {
 
-    display: block;
-
-    width: fit-content;
-
-    margin: 20px auto;
-
-    text-align: center;
-
     color: var(--color-primario);
 
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(2.3rem, 7vw, 4.5rem);
 
     font-weight: 700;
 
-    border-bottom: 2px solid var(--color-primario);
+    line-height: 1.1;
 
 }
 
@@ -305,7 +214,7 @@ h2 {
 
     color: var(--color-secundario);
 
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
 
     font-weight: 600;
 
@@ -316,70 +225,16 @@ h3 {
 
     color: var(--color-secundario);
 
+    font-weight: 600;
+
 }
 
-
-/* =========================================================
-   PÁRRAFOS
-========================================================= */
 
 p {
 
-    color: var(--color-acento);
-
-    font-size: clamp(1rem, 4vw, 1.125rem);
+    font-size: clamp(1rem, 2vw, 1.15rem);
 
     line-height: 1.6;
-
-}
-
-
-/* =========================================================
-   GRID PRINCIPAL
-========================================================= */
-
-.pagina-inicio {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-
-        "titulo"
-        "hero"
-        "carousel"
-        "contenido";
-
-    gap: 20px;
-
-}
-
-
-.pagina-inicio > h1 {
-
-    grid-area: titulo;
-
-}
-
-
-.pagina-inicio > .hero {
-
-    grid-area: hero;
-
-}
-
-
-.pagina-inicio > .carousel-section {
-
-    grid-area: carousel;
-
-}
-
-
-.pagina-inicio > .inicio-grid {
-
-    grid-area: contenido;
 
 }
 
@@ -390,50 +245,87 @@ p {
 
 .hero {
 
-    width: 100%;
+    min-height: 75vh;
 
     display: flex;
 
-    flex-direction: column;
-
     align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
 
-    gap: 15px;
+    gap: 40px;
 
-    padding: 20px;
-
-    text-align: center;
+    padding: 50px 30px;
 
 }
 
 
-.hero h2 {
+.hero-content {
 
-    text-align: center;
-
-}
-
-
-.hero p {
-
-    color: var(--color-secundario);
-
-    font-weight: 600;
-
-}
-
-
-.hero img {
-
-    display: block;
-
-    width: 100%;
+    flex: 1;
 
     max-width: 700px;
 
-    height: auto;
+}
+
+
+.hero-subtitle,
+.section-subtitle {
+
+    color: var(--color-secundario);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero h1 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero p:not(.hero-subtitle) {
+
+    color: var(--color-acento);
+
+    max-width: 650px;
+
+}
+
+
+.hero-image {
+
+    width: min(100%, 500px);
+
+    max-height: 550px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 3px solid var(--color-primario);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 25px;
 
 }
 
@@ -443,8 +335,6 @@ p {
 ========================================================= */
 
 .btn-gym {
-
-    display: inline-block;
 
     background-color: var(--color-primario);
 
@@ -458,18 +348,15 @@ p {
 
     padding: 10px 20px;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
     transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 
 }
 
-
-/* HOVER */
 
 .btn-gym:hover {
 
@@ -477,147 +364,75 @@ p {
 
     border-color: var(--color-secundario);
 
-    color: #000000;
+    color: var(--color-negro);
 
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
 
 }
 
 
-/* FOCUS */
+.btn-outline-gym {
 
-.btn-gym:focus {
+    background-color: transparent;
 
-    background-color: var(--color-secundario);
-
-    border-color: var(--color-secundario);
-
-    color: #000000;
-
-    outline: 3px solid var(--color-acento);
-
-    outline-offset: 3px;
-
-    box-shadow: none;
-
-}
-
-
-/* ACTIVE */
-
-.btn-gym:active {
-
-    background-color: #4ca500 !important;
-
-    border-color: #4ca500 !important;
-
-    color: #000000 !important;
-
-    transform: scale(0.95);
-
-}
-
-
-/* =========================================================
-   CAROUSEL
-========================================================= */
-
-.carousel-section {
-
-    width: 100%;
-
-    padding: 20px 0;
-
-}
-
-
-.carousel-section h2 {
-
-    text-align: center;
-
-    margin-bottom: 20px;
-
-}
-
-
-.carousel-gym {
-
-    width: 100%;
-
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    border: 3px solid var(--color-primario);
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.5);
-
-}
-
-
-/* Tamaño de las imágenes */
-
-.carousel-gym .carousel-item img {
-
-    display: block;
-
-    width: 100%;
-
-    height: 400px;
-
-    object-fit: cover;
-
-}
-
-
-/* Texto del carousel */
-
-.carousel-gym .carousel-caption {
-
-    background-color: rgba(0, 0, 0, 0.65);
-
-    border-radius: 8px;
-
-    padding: 10px;
-
-}
-
-
-.carousel-gym .carousel-caption h3 {
+    border: 2px solid var(--color-secundario);
 
     color: var(--color-secundario);
 
+    font-family: 'Oswald', sans-serif;
+
+    font-weight: 600;
+
+    padding: 10px 20px;
+
+    border-radius: 7px;
+
 }
 
 
-.carousel-gym .carousel-caption p {
+.btn-outline-gym:hover {
 
-    color: var(--color-acento);
+    background-color: var(--color-secundario);
+
+    color: var(--color-negro);
 
 }
 
 
 /* =========================================================
-   GRID DE CARDS
+   SECTION
 ========================================================= */
 
-.inicio-grid {
+.section-block {
 
-    display: grid;
+    margin-top: 55px;
 
-    grid-template-columns: 1fr;
+}
 
-    gap: 20px;
 
-    padding: 20px 0;
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.page-heading {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 30px auto 45px;
+
+}
+
+
+.page-heading h1 {
+
+    margin-bottom: 15px;
 
 }
 
@@ -628,89 +443,43 @@ p {
 
 .bootstrap-card {
 
-    width: 100%;
-
     background-color: rgba(0, 0, 0, 0.78);
 
-    border: 2px solid var(--color-nav);
+    border: 2px solid var(--color-primario);
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     overflow: hidden;
 
     color: var(--color-acento);
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-
-}
-
-
-/* HOVER */
-
-.bootstrap-card:hover {
-
-    transform: translateY(-8px);
-
-    border-color: var(--color-secundario);
-
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.6);
+        0 8px 25px rgba(0, 0, 0, 0.4);
 
 }
 
-
-/* FOCUS */
-
-.bootstrap-card:focus {
-
-    outline: 3px solid var(--color-secundario);
-
-    outline-offset: 3px;
-
-}
-
-
-/* ACTIVE */
-
-.bootstrap-card:active {
-
-    transform: scale(0.98);
-
-}
-
-
-/* Imágenes */
 
 .bootstrap-card .card-img-top {
 
-    display: block;
-
     width: 100%;
 
-    height: 230px;
+    height: 220px;
 
     object-fit: cover;
 
 }
 
 
-/* Contenido */
-
 .bootstrap-card .card-body {
 
-    padding: 20px;
+    padding: 22px;
 
 }
 
 
 .bootstrap-card .card-title {
 
-    color: var(--color-secundario);
-
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
 }
 
@@ -719,22 +488,7 @@ p {
 
     color: var(--color-acento);
 
-}
-
-
-/* =========================================================
-   CLASES
-========================================================= */
-
-.clases-cards {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-
-    padding: 30px 0;
+    margin-bottom: 20px;
 
 }
 
@@ -743,50 +497,201 @@ p {
    STAFF
 ========================================================= */
 
-.staff {
+.staff-card {
 
-    display: grid;
+    min-height: 100%;
 
-    grid-template-columns: 1fr;
+}
 
-    gap: 20px;
 
-    padding: 20px 0;
+.staff-role {
+
+    color: var(--color-primario);
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
 
 }
 
 
 /* =========================================================
-   PÁGINAS SIMPLES
+   CAROUSEL
 ========================================================= */
 
-.simple-page-section {
+.carousel-gym {
 
     width: 100%;
 
-    max-width: 900px;
+    max-width: 1100px;
 
-    margin: 30px auto;
+    margin: 0 auto;
 
-    display: flex;
+    overflow: hidden;
 
-    justify-content: center;
+    border-radius: 15px;
+
+    border: 2px solid var(--color-primario);
 
 }
 
 
-.simple-page-section .bootstrap-card {
+.carousel-gym .carousel-item img {
 
     width: 100%;
 
-}
-
-
-.simple-page-section .card-img-top {
-
-    max-height: 600px;
+    height: 500px;
 
     object-fit: cover;
+
+}
+
+
+.carousel-caption {
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+}
+
+
+.carousel-caption h2,
+.carousel-caption h3 {
+
+    color: var(--color-secundario);
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.info-section {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    margin-top: 55px;
+
+    padding: 35px;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    border: 2px solid var(--color-secundario);
+
+    border-radius: 15px;
+
+}
+
+
+.info-highlight {
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background-color: var(--color-primario);
+
+}
+
+
+.info-highlight span {
+
+    display: block;
+
+    font-size: 3rem;
+
+    font-weight: 700;
+
+    color: var(--color-secundario);
+
+}
+
+
+.info-highlight strong {
+
+    font-size: 1.8rem;
+
+}
+
+
+/* =========================================================
+   TABLA HORARIOS
+========================================================= */
+
+.horarios-table-container {
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 2px solid var(--color-primario);
+
+}
+
+
+.horarios-table {
+
+    margin: 0;
+
+    min-width: 800px;
+
+    color: var(--color-acento);
+
+}
+
+
+.horarios-table thead th {
+
+    background-color: var(--color-primario);
+
+    color: var(--color-acento);
+
+    text-align: center;
+
+    padding: 15px;
+
+}
+
+
+.horarios-table tbody th {
+
+    background-color: rgba(142, 39, 245, 0.8);
+
+    color: var(--color-acento);
+
+    padding: 15px;
+
+}
+
+
+.horarios-table tbody td {
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    color: var(--color-acento);
+
+    text-align: center;
+
+    padding: 15px;
+
+}
+
+
+.horarios-table tbody tr:hover td {
+
+    background-color: rgba(117, 240, 16, 0.15);
 
 }
 
@@ -799,30 +704,23 @@ p {
 
     background-color: #111111;
 
-    border: 2px solid var(--color-nav);
-
     color: var(--color-acento);
+
+    border: 2px solid var(--color-primario);
 
 }
 
 
 .modal-gym .modal-header {
 
-    border-bottom: 1px solid var(--color-nav);
+    border-bottom: 1px solid var(--color-primario);
 
 }
 
 
 .modal-gym .modal-footer {
 
-    border-top: 1px solid var(--color-nav);
-
-}
-
-
-.modal-gym .modal-title {
-
-    color: var(--color-secundario);
+    border-top: 1px solid var(--color-primario);
 
 }
 
@@ -840,21 +738,24 @@ p {
 
 footer {
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    padding: 40px 20px;
-
     margin-top: 30px;
 
+    padding: 30px 20px;
+
+    background-color: var(--color-nav);
+
     text-align: center;
+
+}
+
+
+footer p {
+
+    color: var(--color-negro);
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
 
 }
 
@@ -863,11 +764,11 @@ footer ul {
 
     display: flex;
 
-    align-items: center;
-
     justify-content: center;
 
-    gap: 25px;
+    align-items: center;
+
+    gap: 20px;
 
     list-style: none;
 
@@ -876,229 +777,49 @@ footer ul {
 
 footer img {
 
-    display: block;
+    width: 38px;
 
-    width: 55px;
-
-    height: 55px;
+    height: 38px;
 
     object-fit: cover;
 
-    border-radius: 8px;
+    border-radius: 50%;
 
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+    transition: transform 0.2s ease;
 
 }
 
 
-/* HOVER */
-
-footer a:hover img {
+footer img:hover {
 
     transform: scale(1.15);
 
-    opacity: 0.8;
-
-}
-
-
-/* FOCUS */
-
-footer a:focus {
-
-    outline: 3px solid var(--color-secundario);
-
-    outline-offset: 4px;
-
-}
-
-
-/* ACTIVE */
-
-footer a:active img {
-
-    transform: scale(0.9);
-
 }
 
 
 /* =========================================================
-   TABLET
-   768px
+   RESPONSIVE - MOBILE
 ========================================================= */
 
-@media (min-width: 768px) {
-
-    .inicio-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-
-    .clases-cards {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-
-    .staff {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        align-items: stretch;
-
-    }
-
-}
-
-
-/* =========================================================
-   DESKTOP
-   1024px
-========================================================= */
-
-@media (min-width: 1024px) {
-
-    body {
-
-        padding: 20px;
-
-    }
-
-
-    /* NAVBAR */
-
-    .navbar-gym {
-
-        padding: 8px 20px;
-
-    }
-
-
-    .navbar-gym .navbar-nav {
-
-        gap: 8px;
-
-    }
-
-
-    /* GRID PRINCIPAL */
-
-    .pagina-inicio {
-
-        grid-template-columns: 1fr 2fr;
-
-        grid-template-areas:
-
-            "titulo titulo"
-            "hero carousel"
-            "hero contenido";
-
-        gap: 30px;
-
-    }
-
-
-    /* CARDS */
-
-    .inicio-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 25px;
-
-    }
-
-
-    /* CLASES */
-
-    .clases-cards {
-
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-
-
-    /* CAROUSEL */
-
-    .carousel-gym .carousel-item img {
-
-        height: 450px;
-
-    }
-
-
-    /* FOOTER */
-
-    footer {
-
-        flex-direction: row;
-
-        gap: 40px;
-
-    }
-
-}
-
-
-/* =========================================================
-   PANTALLAS GRANDES
-   1440px
-========================================================= */
-
-@media (min-width: 1440px) {
+@media (max-width: 767px) {
 
     main {
 
-        max-width: 1500px;
+        padding: 20px 12px 40px;
 
     }
 
 
-    .pagina-inicio {
+    .header-bootstrap {
 
-        gap: 40px;
-
-    }
-
-
-    .inicio-grid {
-
-        gap: 30px;
+        padding: 5px 5px 0;
 
     }
 
 
-    .carousel-gym .carousel-item img {
+    .navbar-gym {
 
-        height: 500px;
-
-    }
-
-
-    .bootstrap-card .card-img-top {
-
-        height: 270px;
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   CORRECCIÓN NAVBAR
-========================================================= */
-
-@media (max-width: 991px) {
-
-    .navbar-gym .navbar-collapse {
-
-        padding-top: 15px;
+        border-radius: 8px;
 
     }
 
@@ -1107,26 +828,63 @@ footer a:active img {
 
         align-items: stretch;
 
-        text-align: center;
+        margin-top: 10px;
 
-        gap: 5px;
+        gap: 3px;
 
     }
 
 
     .navbar-gym .nav-link {
 
+        text-align: center;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 10px;
+
+        gap: 25px;
+
+    }
+
+
+    .hero-content {
+
         width: 100%;
 
     }
 
 
-    .logo-navbar,
-    .logo-navbar img {
+    .hero-buttons {
 
-        width: 70px !important;
+        justify-content: center;
 
-        max-width: 70px !important;
+        flex-direction: column;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .hero-image {
+
+        width: 100%;
+
+        max-height: 400px;
 
     }
 
@@ -1137,220 +895,23 @@ footer a:active img {
 
     }
 
-}
- /* =========================================================
-    HORARIOS
- ========================================================= */
 
-.horarios-section {
+    .info-section {
 
-    width: 100%;
+        grid-template-columns: 1fr;
 
-    padding: 20px 0 40px;
+        padding: 25px 20px;
 
-}
+        text-align: center;
 
+    }
 
-.horarios-intro {
 
-    text-align: center;
+    footer ul {
 
-    max-width: 800px;
+        gap: 15px;
 
-    margin: 0 auto 30px;
-
-}
-
-
-.horarios-intro h2 {
-
-    margin-bottom: 10px;
-
-}
-
-
-.horarios-intro p {
-
-    margin: 0;
-
-}
-
-
-
-/* =========================================================
-   TABLA
-========================================================= */
-
-.horarios-table-container {
-
-    width: 100%;
-
-    max-width: 1200px;
-
-    margin: 0 auto 35px;
-
-    background-color: rgba(0, 0, 0, 0.82);
-
-    border: 2px solid var(--color-nav);
-
-    border-radius: 10px;
-
-    overflow-x: auto;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.5);
-
-}
-
-
-.horarios-table {
-
-    min-width: 750px;
-
-    margin: 0;
-
-    color: var(--color-acento);
-
-    vertical-align: middle;
-
-}
-
-
-/* Encabezado */
-
-.horarios-table thead th {
-
-    background-color: var(--color-nav);
-
-    color: var(--color-acento);
-
-    font-size: 1.1rem;
-
-    font-weight: 600;
-
-    text-align: center;
-
-    padding: 15px 10px;
-
-    border-color: rgba(255, 255, 255, 0.2);
-
-}
-
-
-/* Primera columna */
-
-.horarios-table tbody th {
-
-    background-color: rgba(142, 39, 245, 0.25);
-
-    color: var(--color-secundario);
-
-    font-weight: 600;
-
-    text-align: left;
-
-    padding: 15px;
-
-    border-color: rgba(255, 255, 255, 0.15);
-
-}
-
-
-/* Celdas */
-
-.horarios-table tbody td {
-
-    color: var(--color-acento);
-
-    text-align: center;
-
-    padding: 15px 10px;
-
-    border-color: rgba(255, 255, 255, 0.15);
-
-}
-
-
-/* Filas */
-
-.horarios-table tbody tr {
-
-    transition:
-        background-color 0.3s ease;
-
-}
-
-
-.horarios-table tbody tr:hover {
-
-    background-color: rgba(117, 240, 16, 0.12);
-
-}
-
-
-/* =========================================================
-   CARDS DE INFORMACIÓN
-========================================================= */
-
-.horarios-info {
-
-    width: 100%;
-
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-
-}
-
-
-.horario-info-card {
-
-    background-color: rgba(0, 0, 0, 0.78);
-
-    border: 2px solid var(--color-nav);
-
-    border-radius: 10px;
-
-    padding: 25px;
-
-    text-align: center;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-
-}
-
-
-.horario-info-card:hover {
-
-    transform: translateY(-5px);
-
-    border-color: var(--color-secundario);
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.5);
-
-}
-
-
-.horario-info-card h2 {
-
-    margin-bottom: 15px;
-
-}
-
-
-.horario-info-card p {
-
-    margin-bottom: 20px;
+    }
 
 }
 
@@ -1361,9 +922,16 @@ footer a:active img {
 
 @media (min-width: 768px) {
 
-    .horarios-info {
+    .hero {
 
-        grid-template-columns: repeat(2, 1fr);
+        padding: 60px 30px;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: flex-start;
 
     }
 
@@ -1374,26 +942,20 @@ footer a:active img {
    DESKTOP
 ========================================================= */
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
 
-    .horarios-section {
+    main {
 
-        padding-top: 30px;
+        padding-left: 30px;
 
-    }
-
-
-    .horarios-table thead th {
-
-        padding: 18px 12px;
+        padding-right: 30px;
 
     }
 
 
-    .horarios-table tbody td,
-    .horarios-table tbody th {
+    .hero {
 
-        padding: 18px 12px;
+        min-height: 80vh;
 
     }
 
@@ -1401,43 +963,32 @@ footer a:active img {
 
 
 /* =========================================================
-   MOBILE
+   PANTALLAS GRANDES
 ========================================================= */
 
-@media (max-width: 767px) {
+@media (min-width: 1440px) {
 
-    .horarios-table-container {
+    .hero {
 
-        border-radius: 8px;
+        padding-left: 60px;
 
-    }
-
-
-    .horarios-table {
-
-        min-width: 700px;
+        padding-right: 60px;
 
     }
 
 
-    .horarios-intro {
+    .hero-image {
 
-        padding: 0 10px;
-
-    }
-
-
-    .horarios-intro h2 {
-
-        font-size: 1.6rem;
+        max-width: 550px;
 
     }
 
 
-    .horarios-info {
+    .carousel-gym .carousel-item img {
 
-        padding: 0 5px;
+        height: 600px;
 
     }
 
 }
+

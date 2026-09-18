@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gimnasio Power</title>
+    <title>Gimnasio Power | Inicio</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
@@ -24,18 +24,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body>
 
-    <!-- =========================
-         NAVBAR BOOTSTRAP
-    ========================== -->
+    <!-- NAVBAR -->
 
     <header class="header-bootstrap">
 
         <nav class="navbar navbar-expand-lg navbar-gym">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <a class="navbar-brand logo-navbar" href="index.html">
 
@@ -44,7 +41,6 @@
                         alt="Logo Gimnasio Power">
 
                 </a>
-
 
                 <button
                     class="navbar-toggler"
@@ -59,7 +55,6 @@
 
                 </button>
 
-
                 <div
                     class="collapse navbar-collapse"
                     id="menuPrincipal">
@@ -67,68 +62,44 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-
                             <a
                                 class="nav-link active"
                                 aria-current="page"
                                 href="index.html">
-
                                 Inicio
-
                             </a>
-
                         </li>
 
-
                         <li class="nav-item">
-
                             <a
                                 class="nav-link"
                                 href="./pages/staff.html">
-
                                 Personal
-
                             </a>
-
                         </li>
 
-
                         <li class="nav-item">
-
                             <a
                                 class="nav-link"
                                 href="./pages/clases.html">
-
                                 Clases
-
                             </a>
-
                         </li>
 
-
                         <li class="nav-item">
-
                             <a
                                 class="nav-link"
                                 href="./pages/horarios.html">
-
                                 Horarios
-
                             </a>
-
                         </li>
 
-
                         <li class="nav-item">
-
                             <a
                                 class="nav-link"
                                 href="./pages/instalaciones.html">
-
                                 Instalaciones
-
                             </a>
-
                         </li>
 
                     </ul>
@@ -142,45 +113,228 @@
     </header>
 
 
-    <!-- =========================
-         CONTENIDO
-    ========================== -->
+    <!-- CONTENIDO PRINCIPAL -->
 
-    <main class="pagina-inicio">
-
-        <h1>El gimnasio más poderoso</h1>
-
+    <main>
 
         <!-- HERO -->
 
         <section class="hero">
 
-            <h2>Conocé a nuestros profesores y especialistas</h2>
+            <div class="hero-content">
 
-            <p>Staff</p>
+                <p class="hero-subtitle">
+                    GIMNASIO POWER
+                </p>
+
+                <h1>
+                    El gimnasio más poderoso
+                </h1>
+
+                <p>
+                    Entrená, superate y alcanzá tus objetivos.
+                    Contamos con diferentes disciplinas,
+                    profesionales especializados y equipamiento
+                    preparado para acompañarte.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="./pages/clases.html"
+                        class="btn btn-gym">
+                        Ver clases
+                    </a>
+
+                    <a
+                        href="./pages/staff.html"
+                        class="btn btn-outline-gym">
+                        Conocer nuestro staff
+                    </a>
+
+                </div>
+
+            </div>
 
             <img
                 src="./img/portrait-happy-male-gym-instructor-260nw-232353169.webp"
-                alt="Profesor del gimnasio">
-
-            <a
-                href="./pages/staff.html"
-                class="btn btn-gym">
-
-                Conocer nuestro staff
-
-            </a>
+                alt="Profesor del gimnasio"
+                class="hero-image">
 
         </section>
 
 
-        <!-- =========================
-             CAROUSEL
-        ========================== -->
+        <!-- PRESENTACIÓN -->
 
-        <section class="carousel-section">
+        <section class="section-block">
 
-            <h2>Conocé nuestras instalaciones</h2>
+            <div class="section-title">
+
+                <p class="section-subtitle">
+                    TODO EN UN SOLO LUGAR
+                </p>
+
+                <h2>
+                    Entrená a tu manera
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <img
+                            src="./img/Equipamiento_gimnasio_accesorios_para_las_diferentes_salas.webp"
+                            class="card-img-top"
+                            alt="Equipamiento del gimnasio">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Equipamiento
+                            </h3>
+
+                            <p class="card-text">
+                                Espacios preparados con equipamiento
+                                para diferentes tipos de entrenamiento.
+                            </p>
+
+                            <a
+                                href="./pages/instalaciones.html"
+                                class="btn btn-gym">
+                                Ver instalaciones
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <img
+                            src="./img/images.jpg"
+                            class="card-img-top"
+                            alt="Clases del gimnasio">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Clases
+                            </h3>
+
+                            <p class="card-text">
+                                Yoga, spinning, musculación,
+                                powerlifting, boxeo e hidrogimnasia.
+                            </p>
+
+                            <a
+                                href="./pages/clases.html"
+                                class="btn btn-gym">
+                                Ver clases
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <img
+                            src="./img/8ab6a5658d4fb40d79f7053de5aadf45.jpg"
+                            class="card-img-top"
+                            alt="Horarios del gimnasio">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Horarios
+                            </h3>
+
+                            <p class="card-text">
+                                Consultá los horarios disponibles
+                                para cada disciplina.
+                            </p>
+
+                            <a
+                                href="./pages/horarios.html"
+                                class="btn btn-gym">
+                                Ver horarios
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <article class="card bootstrap-card h-100">
+
+                        <img
+                            src="./img/OFERTAS.jpg"
+                            class="card-img-top"
+                            alt="Ofertas del gimnasio">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Promociones
+                            </h3>
+
+                            <p class="card-text">
+                                Conocé nuestras opciones de
+                                entrenamiento y promociones.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-gym"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalPrecios">
+                                Ver información
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAROUSEL -->
+
+        <section class="section-block">
+
+            <div class="section-title">
+
+                <p class="section-subtitle">
+                    CONOCÉ EL GIMNASIO
+                </p>
+
+                <h2>
+                    Nuestras instalaciones
+                </h2>
+
+            </div>
 
             <div
                 id="carouselGimnasio"
@@ -229,11 +383,13 @@
                         <img
                             src="./img/instalaciones.jpg"
                             class="d-block w-100"
-                            alt="Instalaciones del gimnasio">
+                            alt="Instalaciones">
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Instalaciones</h3>
+                            <h3>
+                                Instalaciones
+                            </h3>
 
                             <p>
                                 Espacios preparados para entrenar.
@@ -249,11 +405,13 @@
                         <img
                             src="./img/Equipamiento_gimnasio_accesorios_para_las_diferentes_salas.webp"
                             class="d-block w-100"
-                            alt="Equipamiento del gimnasio">
+                            alt="Equipamiento">
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Equipamiento</h3>
+                            <h3>
+                                Equipamiento
+                            </h3>
 
                             <p>
                                 Todo lo necesario para tus entrenamientos.
@@ -269,11 +427,13 @@
                         <img
                             src="./img/images.jpg"
                             class="d-block w-100"
-                            alt="Clases del gimnasio">
+                            alt="Clases">
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Clases</h3>
+                            <h3>
+                                Clases
+                            </h3>
 
                             <p>
                                 Diferentes disciplinas para elegir.
@@ -289,11 +449,13 @@
                         <img
                             src="./img/OFERTAS.jpg"
                             class="d-block w-100"
-                            alt="Ofertas del gimnasio">
+                            alt="Promociones">
 
                         <div class="carousel-caption d-none d-md-block">
 
-                            <h3>Promociones</h3>
+                            <h3>
+                                Promociones
+                            </h3>
 
                             <p>
                                 Consultá nuestras ofertas.
@@ -346,152 +508,51 @@
         </section>
 
 
-        <!-- =========================
-             CARDS
-        ========================== -->
+        <!-- UBICACIÓN -->
 
-        <section class="inicio-grid">
+        <section class="info-section">
 
+            <div>
 
-            <!-- CARD 1 -->
+                <p class="section-subtitle">
+                    ENCONTRANOS
+                </p>
 
-            <article class="card bootstrap-card">
+                <h2>
+                    Ubicación y atención
+                </h2>
 
-                <img
-                    class="card-img-top"
-                    src="./img/Equipamiento_gimnasio_accesorios_para_las_diferentes_salas.webp"
-                    alt="Equipamiento">
+                <p>
+                    Estamos ubicados a pasos de Av. del Valle
+                    casi Yaguarón.
+                </p>
 
-                <div class="card-body">
+                <p>
+                    Nuestro gimnasio está pensado para que
+                    puedas entrenar y progresar acompañado.
+                </p>
 
-                    <h2 class="card-title">
-                        Equipamiento y ubicación
-                    </h2>
+            </div>
 
-                    <p class="card-text">
-                        Nos encontramos a pasos de Av. del Valle
-                        casi Yaguarón.
-                    </p>
+            <div class="info-highlight">
 
-                    <a
-                        href="./pages/instalaciones.html"
-                        class="btn btn-gym">
+                <span>
+                    24 HS
+                </span>
 
-                        Ver instalaciones
+                <p>
+                    Gimnasio disponible para que puedas organizar
+                    tus entrenamientos.
+                </p>
 
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- CARD 2 -->
-
-            <article class="card bootstrap-card">
-
-                <img
-                    class="card-img-top"
-                    src="./img/images.jpg"
-                    alt="Clases">
-
-                <div class="card-body">
-
-                    <h2 class="card-title">
-                        Todas las clases
-                    </h2>
-
-                    <p class="card-text">
-                        Yoga, spinning, musculación, powerlifting,
-                        hidrogimnasia y boxeo.
-                    </p>
-
-                    <a
-                        href="./pages/clases.html"
-                        class="btn btn-gym">
-
-                        Ver clases
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- CARD 3 -->
-
-            <article class="card bootstrap-card">
-
-                <img
-                    class="card-img-top"
-                    src="./img/8ab6a5658d4fb40d79f7053de5aadf45.jpg"
-                    alt="Horarios">
-
-                <div class="card-body">
-
-                    <h2 class="card-title">
-                        Horarios
-                    </h2>
-
-                    <p class="card-text">
-                        Gimnasio disponible las 24 horas.
-                    </p>
-
-                    <a
-                        href="./pages/horarios.html"
-                        class="btn btn-gym">
-
-                        Ver horarios
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- CARD 4 -->
-
-            <article class="card bootstrap-card">
-
-                <img
-                    class="card-img-top"
-                    src="./img/OFERTAS.jpg"
-                    alt="Ofertas">
-
-                <div class="card-body">
-
-                    <h2 class="card-title">
-                        Precios
-                    </h2>
-
-                    <p class="card-text">
-                        Todas las clases a partir de 3.000 pesos.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-gym"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modalPrecios">
-
-                        Ver información
-
-                    </button>
-
-                </div>
-
-            </article>
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- =========================
-         MODAL
-    ========================== -->
+    <!-- MODAL -->
 
     <div
         class="modal fade"
@@ -509,9 +570,7 @@
                     <h2
                         class="modal-title"
                         id="modalPreciosLabel">
-
-                        Precios del gimnasio
-
+                        Información
                     </h2>
 
                     <button
@@ -522,7 +581,6 @@
                     </button>
 
                 </div>
-
 
                 <div class="modal-body">
 
@@ -538,16 +596,13 @@
 
                 </div>
 
-
                 <div class="modal-footer">
 
                     <button
                         type="button"
                         class="btn btn-gym"
                         data-bs-dismiss="modal">
-
                         Cerrar
-
                     </button>
 
                 </div>
@@ -559,18 +614,21 @@
     </div>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
-        <p>Todos los derechos reservados</p>
+        <p>
+            Todos los derechos reservados | Gimnasio Power
+        </p>
 
         <ul>
 
             <li>
-                <a href="https://www.instagram.com/" target="_blank">
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <img
                         src="./img/IG.jpg"
@@ -579,9 +637,11 @@
                 </a>
             </li>
 
-
             <li>
-                <a href="https://www.tiktok.com/" target="_blank">
+                <a
+                    href="https://www.tiktok.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <img
                         src="./img/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.webp"
@@ -590,9 +650,11 @@
                 </a>
             </li>
 
-
             <li>
-                <a href="https://x.com/" target="_blank">
+                <a
+                    href="https://x.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <img
                         src="./img/X_icon.svg.webp"
@@ -606,7 +668,8 @@
     </footer>
 
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JavaScript -->
+
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
@@ -614,3 +677,4 @@
 </body>
 
 </html>
+
