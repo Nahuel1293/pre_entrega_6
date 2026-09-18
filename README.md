@@ -31,7 +31,9 @@ Sitio web desarrollado como proyecto de pre-entrega para el curso de Desarrollo 
 
 El sitio fue adaptado para diferentes tamaños de pantalla utilizando Bootstrap, CSS Grid, Flexbox y Media Queries.
 
+## Sitio publicado
 
+🔗 [Ver sitio web](https://nahuel1293.github.io/pre_entrega_6/)
 
 ## Autor
 
