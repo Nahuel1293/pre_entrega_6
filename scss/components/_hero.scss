@@ -1,0 +1,48 @@
+@use "../utilities/variables" as *;
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $hero-gap;
+  padding: 50px 30px;
+
+  &-content {
+    flex: 1;
+    max-width: 700px;
+  }
+
+  &-subtitle,
+  .section-subtitle {
+    color: $color-secundario;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p:not(.hero-subtitle) {
+    color: $color-acento;
+    max-width: 650px;
+  }
+
+  &-image {
+    width: min(100%, 500px);
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: $radio-xl;
+    border: 3px solid $color-primario;
+    box-shadow: 0 10px 30px $shadow-dark;
+  }
+
+  &-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+  }
+}

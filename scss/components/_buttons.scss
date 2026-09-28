@@ -1,0 +1,36 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn-gym {
+  background-color: $color-primario;
+  border: $border-width solid $color-primario;
+  color: $color-acento;
+  font-family: $font-principal;
+  font-weight: 600;
+  padding: $padding-button;
+  border-radius: $radio-sm;
+  @include transition((background-color, color, transform));
+
+  &:hover {
+    background-color: $color-secundario;
+    border-color: $color-secundario;
+    color: $color-negro;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-outline-gym {
+  background-color: transparent;
+  border: $border-width solid $color-secundario;
+  color: $color-secundario;
+  font-family: $font-principal;
+  font-weight: 600;
+  padding: $padding-button;
+  border-radius: $radio-sm;
+  @include transition((background-color, color));
+
+  &:hover {
+    background-color: $color-secundario;
+    color: $color-negro;
+  }
+}

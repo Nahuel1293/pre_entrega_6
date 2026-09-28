@@ -1,0 +1,432 @@
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  color: #E63946;
+  font-size: clamp(2.3rem, 7vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  color: #75f010;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 600;
+}
+
+h3 {
+  color: #75f010;
+  font-weight: 600;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../img/Fondo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #FFFFFF;
+}
+
+main {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 30px 15px 50px;
+}
+
+.header-bootstrap {
+  width: 100%;
+  padding: 10px 10px 0;
+}
+.header-bootstrap .navbar-gym {
+  background-color: #8E27F5;
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+.header-bootstrap .navbar-gym .logo-navbar {
+  display: flex !important;
+  align-items: center;
+  padding: 0 !important;
+}
+.header-bootstrap .navbar-gym .logo-navbar img {
+  width: 70px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.header-bootstrap .navbar-gym .logo-navbar:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.navbar-gym .navbar-nav {
+  align-items: center;
+  gap: 5px;
+}
+.navbar-gym .nav-link {
+  color: #000000;
+  font-weight: 600;
+  padding: 9px 14px !important;
+  border-radius: 7px;
+  transition: background-color, color, transform 0.2s ease;
+}
+.navbar-gym .nav-link:hover, .navbar-gym .nav-link.active {
+  background-color: #E63946;
+  color: #FFFFFF;
+}
+.navbar-gym .nav-link:hover {
+  transform: translateY(-2px);
+}
+.navbar-gym .navbar-toggler {
+  border: 2px solid #75f010;
+}
+.navbar-gym .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(117, 240, 16, 0.35);
+}
+
+footer {
+  margin-top: 30px;
+  padding: 30px 20px;
+  background-color: #8E27F5;
+  text-align: center;
+}
+footer p {
+  color: #000000;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+footer img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+footer img:hover {
+  transform: scale(1.15);
+}
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 30px;
+}
+.hero-content {
+  flex: 1;
+  max-width: 700px;
+}
+.hero-subtitle,
+.hero .section-subtitle {
+  color: #75f010;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.hero h1 {
+  margin-bottom: 20px;
+}
+.hero p:not(.hero-subtitle) {
+  color: #FFFFFF;
+  max-width: 650px;
+}
+.hero-image {
+  width: min(100%, 500px);
+  max-height: 550px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #E63946;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-gym {
+  background-color: #E63946;
+  border: 2px solid #E63946;
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 7px;
+  transition: background-color, color, transform 0.2s ease;
+}
+.btn-gym:hover {
+  background-color: #75f010;
+  border-color: #75f010;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.btn-outline-gym {
+  background-color: transparent;
+  border: 2px solid #75f010;
+  color: #75f010;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 7px;
+  transition: background-color, color 0.2s ease;
+}
+.btn-outline-gym:hover {
+  background-color: #75f010;
+  color: #000000;
+}
+
+.bootstrap-card {
+  background-color: rgba(0, 0, 0, 0.78);
+  border: 2px solid #E63946;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #FFFFFF;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+.bootstrap-card .card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.bootstrap-card .card-body {
+  padding: 22px;
+}
+.bootstrap-card .card-title {
+  margin-bottom: 12px;
+}
+.bootstrap-card .card-text {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.staff-card {
+  min-height: 100%;
+}
+
+.staff-role {
+  color: #E63946;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-block {
+  margin-top: 55px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 30px auto 45px;
+}
+.page-heading h1 {
+  margin-bottom: 15px;
+}
+
+.carousel-gym {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 2px solid #E63946;
+}
+.carousel-gym .carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+}
+.carousel-caption h2,
+.carousel-caption h3 {
+  color: #75f010;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-top: 55px;
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid #75f010;
+  border-radius: 15px;
+}
+
+.info-highlight {
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #E63946;
+}
+.info-highlight span {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #75f010;
+}
+.info-highlight strong {
+  font-size: 1.8rem;
+}
+
+.horarios-table-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #E63946;
+}
+
+.horarios-table {
+  margin: 0;
+  min-width: 800px;
+  color: #FFFFFF;
+}
+.horarios-table thead th {
+  background-color: #E63946;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px;
+}
+.horarios-table tbody th {
+  background-color: rgba(142, 39, 245, 0.8);
+  color: #FFFFFF;
+  padding: 15px;
+}
+.horarios-table tbody td {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px;
+}
+.horarios-table tbody tr:hover td {
+  background-color: rgba(117, 240, 16, 0.15);
+}
+
+.modal-gym {
+  background-color: #111111;
+  color: #FFFFFF;
+  border: 2px solid #E63946;
+}
+.modal-gym .modal-header {
+  border-bottom: 1px solid #E63946;
+}
+.modal-gym .modal-footer {
+  border-top: 1px solid #E63946;
+}
+.modal-gym .btn-close {
+  filter: invert(1);
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 20px 12px 40px;
+  }
+  .header-bootstrap {
+    padding: 5px 5px 0;
+  }
+  .navbar-gym {
+    border-radius: 8px;
+  }
+  .navbar-gym .navbar-nav {
+    align-items: stretch;
+    margin-top: 10px;
+    gap: 3px;
+  }
+  .navbar-gym .nav-link {
+    text-align: center;
+  }
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 10px;
+    gap: 25px;
+  }
+  .hero-content {
+    width: 100%;
+  }
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  .hero-image {
+    width: 100%;
+    max-height: 400px;
+  }
+  .carousel-gym .carousel-item img {
+    height: 280px;
+  }
+  .info-section {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  footer ul {
+    gap: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px 30px;
+  }
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .hero {
+    min-height: 80vh;
+  }
+}
+@media (min-width: 1440px) {
+  .hero {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .hero-image {
+    max-width: 550px;
+  }
+  .carousel-gym .carousel-item img {
+    height: 600px;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+
+.bootstrap-card {
+  background-color: $card-background;
+  border: $border-width solid $color-primario;
+  border-radius: $radio-lg;
+  overflow: hidden;
+  color: $color-acento;
+  box-shadow: 0 8px 25px $card-shadow;
+
+  .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 22px;
+  }
+
+  .card-title {
+    margin-bottom: 12px;
+  }
+
+  .card-text {
+    color: $color-acento;
+    margin-bottom: 20px;
+  }
+}
+
+.staff-card {
+  min-height: 100%;
+}
+
+.staff-role {
+  color: $color-primario;
+  font-weight: 700;
+  letter-spacing: 1px;
+}

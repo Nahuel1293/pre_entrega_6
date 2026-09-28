@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+@mixin transition($properties: all) {
+  transition: $properties $transition-base;
+}
+
+@mixin centered-container($max-width: $container-max-width) {
+  width: min($max-width, 100%);
+  margin: 0 auto;
+}

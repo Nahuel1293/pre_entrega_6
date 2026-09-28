@@ -1,0 +1,53 @@
+# Gimnasio Power
+
+Sitio web desarrollado como proyecto de pre-entrega para el curso de Desarrollo Web.
+
+## Tecnologías utilizadas
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- Git
+- GitHub
+
+## Páginas
+
+- Inicio
+- Staff
+- Clases
+- Horarios
+- Instalaciones
+
+## Características
+
+- Diseño responsive para computadora de escritorio, tablet y celular.
+- Navbar responsive con menú hamburguesa.
+- Componentes de Bootstrap.
+- CSS personalizado.
+- Imágenes y contenido relacionados con el gimnasio.
+- Estructura organizada en diferentes páginas.
+
+## Responsive Design
+
+El sitio fue adaptado para diferentes tamaños de pantalla utilizando Bootstrap, CSS Grid, Flexbox y Media Queries.
+
+## Sitio publicado
+
+🔗 [Ver sitio web](https://nahuel1293.github.io/pre_entrega_6/)
+
+## Autor
+
+Nahuel Martinez
+
+## SCSS - Entrega Módulo
+
+La hoja de estilos fue refactorizada a SCSS usando partials, variables, mixins, nesting y `@use`.
+
+### Compilar
+
+```bash
+npm install
+npm run sass
+```
+
+El único punto de entrada es `scss/main.scss` y el resultado se genera en `css/style.css`.

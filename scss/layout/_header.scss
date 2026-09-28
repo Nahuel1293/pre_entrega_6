@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+ .header-bootstrap {
+  width: 100%;
+  padding: 10px 10px 0;
+
+  .navbar-gym {
+    background-color: $color-nav;
+    border-radius: $radio-md;
+    padding: 8px 15px;
+
+    .logo-navbar {
+      display: flex !important;
+      align-items: center;
+      padding: 0 !important;
+
+      img {
+        width: 70px;
+        height: auto;
+        display: block;
+        object-fit: contain;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        @include transition(transform);
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+
+.modal-gym {
+  background-color: $color-modal;
+  color: $color-acento;
+  border: $border-width solid $color-primario;
+
+  .modal-header {
+    border-bottom: 1px solid $color-primario;
+  }
+
+  .modal-footer {
+    border-top: 1px solid $color-primario;
+  }
+
+  .btn-close {
+    filter: invert(1);
+  }
+}

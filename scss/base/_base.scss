@@ -1,0 +1,25 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    linear-gradient($overlay-body, $overlay-body),
+    url('../img/Fondo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $color-acento;
+}
+
+main {
+  @include centered-container();
+  padding: 30px 15px 50px;
+}

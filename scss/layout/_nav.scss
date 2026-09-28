@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.navbar-gym {
+  .navbar-nav {
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav-link {
+    color: $color-negro;
+    font-weight: 600;
+    padding: 9px 14px !important;
+    border-radius: $radio-sm;
+    @include transition((background-color, color, transform));
+
+    &:hover,
+    &.active {
+      background-color: $color-primario;
+      color: $color-acento;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  .navbar-toggler {
+    border: 2px solid $color-secundario;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $focus-overlay;
+    }
+  }
+}

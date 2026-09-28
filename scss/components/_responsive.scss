@@ -1,0 +1,93 @@
+@use "../utilities/variables" as *;
+
+@media (max-width: 767px) {
+  main { padding: 20px 12px 40px; }
+
+  .header-bootstrap {
+    padding: 5px 5px 0;
+  }
+
+  .navbar-gym {
+    border-radius: 8px;
+
+    .navbar-nav {
+      align-items: stretch;
+      margin-top: 10px;
+      gap: 3px;
+    }
+
+    .nav-link {
+      text-align: center;
+    }
+  }
+
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 10px;
+    gap: 25px;
+
+    &-content { width: 100%; }
+
+    &-buttons {
+      justify-content: center;
+      flex-direction: column;
+
+      .btn { width: 100%; }
+    }
+
+    &-image {
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+
+  .carousel-gym .carousel-item img {
+    height: 280px;
+  }
+
+  .info-section {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  footer ul { gap: 15px; }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px 30px;
+
+    &-buttons {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .hero-image {
+    max-width: 550px;
+  }
+
+  .carousel-gym .carousel-item img {
+    height: 600px;
+  }
+}

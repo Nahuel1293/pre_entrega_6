@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+footer {
+  margin-top: 30px;
+  padding: 30px 20px;
+  background-color: $color-nav;
+  text-align: center;
+
+  p {
+    color: $color-negro;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+  }
+
+  img {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+    @include transition(transform);
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}

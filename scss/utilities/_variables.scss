@@ -1,0 +1,36 @@
+// Colores
+$color-primario: #E63946;
+$color-secundario: #75f010;
+$color-acento: #FFFFFF;
+$color-nav: #8E27F5;
+$color-negro: #000000;
+$color-modal: #111111;
+
+// Tipografía
+$font-principal: 'Oswald', sans-serif;
+
+// Bordes y radios
+$radio-sm: 7px;
+$radio-md: 10px;
+$radio-lg: 12px;
+$radio-xl: 15px;
+
+// Espaciado y tamaños reutilizables
+$padding-button: 10px 20px;
+$container-max-width: 1400px;
+$hero-gap: 40px;
+$border-width: 2px;
+
+// Transiciones y sombras
+$transition-base: 0.2s ease;
+$shadow-dark: rgba(0, 0, 0, 0.5);
+$card-shadow: rgba(0, 0, 0, 0.4);
+
+// Fondos con transparencia
+$overlay-body: rgba(0, 0, 0, 0.65);
+$card-background: rgba(0, 0, 0, 0.78);
+$caption-background: rgba(0, 0, 0, 0.7);
+$info-background: rgba(0, 0, 0, 0.75);
+$table-header-alt: rgba(142, 39, 245, 0.8);
+$hover-overlay: rgba(117, 240, 16, 0.15);
+$focus-overlay: rgba(117, 240, 16, 0.35);

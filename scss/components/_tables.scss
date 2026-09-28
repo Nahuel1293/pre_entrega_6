@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+
+.horarios-table-container {
+  border-radius: $radio-lg;
+  overflow: hidden;
+  border: $border-width solid $color-primario;
+}
+
+.horarios-table {
+  margin: 0;
+  min-width: 800px;
+  color: $color-acento;
+
+  thead th {
+    background-color: $color-primario;
+    color: $color-acento;
+    text-align: center;
+    padding: 15px;
+  }
+
+  tbody {
+    th {
+      background-color: $table-header-alt;
+      color: $color-acento;
+      padding: 15px;
+    }
+
+    td {
+      background-color: $info-background;
+      color: $color-acento;
+      text-align: center;
+      padding: 15px;
+    }
+
+    tr:hover td {
+      background-color: $hover-overlay;
+    }
+  }
+}
