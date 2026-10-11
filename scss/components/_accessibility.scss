@@ -1,0 +1,36 @@
+@use "../utilities/variables" as *;
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  transform: translateY(-150%);
+  z-index: 2000;
+  background: $color-acento;
+  color: $color-negro;
+  padding: 12px 20px;
+  &:focus { transform: translateY(0); outline-color: $color-negro; }
+}
+.navbar-gym {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.btn-gym:focus-visible, .btn-gym:active {
+  background-color: $color-primario;
+  color: $color-acento;
+  border-color: $color-acento;
+}
+.btn-outline-gym:focus-visible, .btn-outline-gym:active {
+  background-color: $color-secundario;
+  color: $color-negro;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: $color-negro;
+  border-radius: 4px;
+  outline: 2px solid $color-acento;
+}
+.carousel-control-prev, .carousel-control-next { opacity: 1; }
+.carousel-indicators button { outline: 2px solid $color-negro; }
+.horarios-table caption { color: $color-acento; background: $color-modal; padding: 16px; caption-side: top; }
+.horarios-table tbody tr:hover td { background-color: #242424; }
+footer a { display: inline-flex; padding: 6px; }
+img { height: auto; }

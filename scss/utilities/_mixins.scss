@@ -1,0 +1,29 @@
+@use "sass:list";
+@use "variables" as *;
+
+@mixin transition($properties: all, $duration: $transition-base) {
+  $transitions: ();
+
+  @each $property in $properties {
+    $transitions: list.append($transitions, #{$property} $duration, comma);
+  }
+
+  transition: $transitions;
+}
+
+@mixin centered-container($max-width: $container-max-width) {
+  width: min($max-width, 100%);
+  margin: 0 auto;
+}
+
+@mixin responsive-padding($mobile, $tablet, $desktop) {
+  padding: $mobile;
+
+  @media (min-width: 768px) {
+    padding: $tablet;
+  }
+
+  @media (min-width: 1024px) {
+    padding: $desktop;
+  }
+}

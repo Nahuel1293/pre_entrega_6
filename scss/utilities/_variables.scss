@@ -1,0 +1,45 @@
+// Colores
+$color-primario: #B91C32;
+$color-secundario: #75f010;
+$color-acento: #FFFFFF;
+$color-nav: #7020C2;
+$color-negro: #000000;
+$color-modal: #111111;
+
+// Tipografía
+$font-principal: 'Oswald', sans-serif;
+
+// Bordes y radios
+$radio-sm: 7px;
+$radio-md: 10px;
+$radio-lg: 12px;
+$radio-xl: 15px;
+
+// Espaciado y tamaños reutilizables
+$padding-button: 10px 20px;
+$container-max-width: 1400px;
+$hero-gap: 40px;
+$hero-gap-mobile: $hero-gap * 0.625;
+$border-width: 2px;
+
+// Transiciones y sombras
+$transition-base: 0.2s ease;
+$shadow-dark: rgba(0, 0, 0, 0.5);
+$card-shadow: rgba(0, 0, 0, 0.4);
+
+// Fondos con transparencia
+$overlay-body: rgba(0, 0, 0, 0.85);
+$card-background: rgba(0, 0, 0, 0.78);
+$caption-background: rgba(0, 0, 0, 0.7);
+$info-background: rgba(0, 0, 0, 0.75);
+$table-header-alt: #7020C2;
+$hover-overlay: rgba(117, 240, 16, 0.15);
+$focus-overlay: rgba(117, 240, 16, 0.35);
+
+// Valores derivados mediante operadores aritméticos de Sass.
+$motion-duration: 600ms;
+$motion-duration-mobile: $motion-duration * 0.75;
+$motion-distance: $hero-gap * 0.3;
+$motion-distance-mobile: $motion-distance * 0.5;
+
+$color-titulo: #FF8291;

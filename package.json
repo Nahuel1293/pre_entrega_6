@@ -1,0 +1,11 @@
+{
+  "name": "pre-entrega-6",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sass": "sass scss/main.scss css/style.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

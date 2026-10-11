@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+%button-base {
+  display: inline-block;
+  font-family: $font-principal;
+  font-weight: 600;
+  padding: $padding-button;
+  border-radius: $radio-sm;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition((background-color, color, transform, box-shadow));
+}
+
+.btn-gym {
+  @extend %button-base;
+  background-color: $color-primario;
+  border: $border-width solid $color-primario;
+  color: $color-acento;
+
+  &:hover {
+    background-color: $color-secundario;
+    border-color: $color-secundario;
+    color: $color-negro;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btn-outline-gym {
+  @extend %button-base;
+  background-color: transparent;
+  border: $border-width solid $color-secundario;
+  color: $color-secundario;
+
+  &:hover {
+    background-color: $color-secundario;
+    color: $color-negro;
+    transform: translateY(-2px);
+  }
+}

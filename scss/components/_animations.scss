@@ -1,0 +1,59 @@
+@use "../utilities/variables" as *;
+
+// Placeholder compartido: se aplica a elementos visibles al cargar.
+%load-entry {
+  animation: entrada-gradual $motion-duration ease-out both;
+}
+
+.hero-content,
+.page-heading {
+  @extend %load-entry;
+}
+
+@keyframes entrada-gradual {
+  from {
+    opacity: 0;
+    transform: translateY($motion-distance);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content,
+  .page-heading {
+    animation-duration: $motion-duration-mobile;
+  }
+
+  @keyframes entrada-gradual {
+    from {
+      opacity: 0;
+      transform: translateY($motion-distance-mobile);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// El contenido sigue visible si JavaScript o el CDN no están disponibles.
+html:not(.aos-ready) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .page-heading {
+    animation: none;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
